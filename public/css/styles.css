@@ -1,0 +1,67 @@
+body, main, h1, p, div, section, form, input {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 50px;
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+h1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.chat-room {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.menu {
+  width: 200px;
+  height: 100%;
+  border-right: 1px solid black;
+}
+
+.chat-box {
+  width: calc(100% - 200px);
+  height: 100%;
+}
+
+p {
+  padding: 7px;
+}
+
+form {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  height: 40px;
+}
+
+#chat-zone {
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

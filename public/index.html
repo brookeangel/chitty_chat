@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Chitty Chat</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/javascripts/chat_ui.js"></script>
     <script src="/javascripts/chat.js"></script>
@@ -10,14 +11,17 @@
   <body>
     <main>
       <h1>Chitty Chat</h1>
-      <aside>Menu</aside>
-      <section id="chat-zone">Chat Zone</section>
-      <form id="chat-form">
-        <input
-          placeholder="say something!"
-          type="text"/>
-        <input type="submit">Send Message!</input>
-      </form>
+      <div class="chat-room">
+        <aside class="menu">Menu</aside>
+        <div class="chat-box">
+          <section id="chat-zone"></section>
+          <form id="chat-form">
+            <input
+              placeholder="say something!"
+              type="text"/>
+          </form>
+        </div>
+      </div>
     </main>
 
     <script>
