@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chitty Chat</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/javascripts/chat_ui.js"></script>
+    <script src="/javascripts/chat.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Chitty Chat</h1>
+      <aside>Menu</aside>
+      <section id="chat-zone">Chat Zone</section>
+      <form id="chat-form">
+        <input
+          placeholder="say something!"
+          type="text"/>
+        <input type="submit">Send Message!</input>
+      </form>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const socket = io();
+        const chat = new Chat(socket);
+        const chatUI = new ChatUI(
+          document.getElementById('chat-form'),
+          document.getElementById('chat-zone'),
+          chat
+        );
+      });
+    </script>
+  </body>
+</html>
