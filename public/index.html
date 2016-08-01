@@ -12,7 +12,15 @@
     <main>
       <h1>Chitty Chat</h1>
       <div class="chat-room">
-        <aside class="menu">Menu</aside>
+        <aside class="menu">
+          <h2>Rooms</h2>
+          <ul></ul>
+          <form id="room-creation-form">
+            <input
+              placeholder="Add new room!"
+              type="text" />
+          </form>
+        </aside>
         <div class="chat-box">
           <section id="chat-zone"></section>
           <form id="chat-form">
@@ -29,8 +37,7 @@
         const socket = io();
         const chat = new Chat(socket);
         const chatUI = new ChatUI(
-          document.getElementById('chat-form'),
-          document.getElementById('chat-zone'),
+          document.querySelector('.chat-room'),
           chat
         );
       });
